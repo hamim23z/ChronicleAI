@@ -5,8 +5,8 @@ import "./globals.css"; // This imports the global CSS file
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Your Website Title",
-  description: "Your Website Description",
+  title: "Comp Sci Chronicles",
+  description: "AI Chat Bot for CS Students",
 };
 
 export default function RootLayout({ children }) {
