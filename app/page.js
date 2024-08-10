@@ -76,8 +76,9 @@ export default function Home() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        width: "100vw",
-        height: "100vh",
+        "@media (max-width: 600px)": {
+          padding: "1rem",
+        },
       }}
     >
       <Typography
@@ -90,6 +91,14 @@ export default function Home() {
           borderRadius: "20px",
           fontWeight: "bold",
           textTransform: "uppercase",
+          textAlign: "center",
+          width: "100%",
+          maxWidth: "1200px", // Adjusted maxWidth
+          "@media (max-width: 600px)": {
+            fontSize: "1.5rem",
+            padding: "15px",
+            borderRadius: "15px",
+          },
         }}
       >
         CS Chronicles Support Chat
@@ -97,16 +106,21 @@ export default function Home() {
 
       <Stack
         direction="column"
-        width="1200px"
-        height="700px"
+        width="100%"
+        maxWidth="1200px" // Adjusted maxWidth
+        height="70vh"
         border="2px solid #E5383B"
         borderRadius={4}
         p={2}
         spacing={3}
         sx={{
-          backgroundColor:
-            "#111" /*background color for the chat box entirely*/,
+          backgroundColor: "#111",
           color: "white",
+          overflow: "hidden",
+          mt: 2,
+          "@media (max-width: 600px)": {
+            height: "60vh",
+          },
         }}
       >
         <Stack
@@ -114,7 +128,6 @@ export default function Home() {
           spacing={2}
           flexGrow={1}
           overflow="auto"
-          maxHeight="100%"
           sx={{
             "&::-webkit-scrollbar": {
               width: "6px",
@@ -125,6 +138,11 @@ export default function Home() {
             "&::-webkit-scrollbar-thumb": {
               background: "darkgrey",
               borderRadius: "4px",
+            },
+            "@media (max-width: 600px)": {
+              "&::-webkit-scrollbar": {
+                width: "4px",
+              },
             },
           }}
         >
@@ -140,12 +158,16 @@ export default function Home() {
                 bgcolor={message.role === "assistant" ? "#800E13" : "#AD2831"}
                 color="white"
                 borderRadius={16}
-                padding={"23px"}
+                padding={"16px"}
                 m={1}
                 boxShadow={3}
                 style={{
                   color: "#FFF",
                   border: "3px solid #111",
+                  maxWidth: "80%",
+                  "@media (max-width: 600px)": {
+                    padding: "12px",
+                  },
                 }}
               >
                 {message.content}
@@ -153,7 +175,18 @@ export default function Home() {
             </Box>
           ))}
         </Stack>
-        <Stack direction="row" spacing={2} alignItems="center" color="white">
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems="center"
+          color="white"
+          sx={{
+            "@media (max-width: 600px)": {
+              flexDirection: "column",
+              gap: "1rem",
+            },
+          }}
+        >
           <TextField
             label="Enter message here:"
             fullWidth
@@ -177,36 +210,22 @@ export default function Home() {
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
                   borderColor: "white",
-                  color: "white",
                 },
                 "&:hover fieldset": {
                   borderColor: "white",
-                  color: "white",
                 },
                 "&.Mui-focused fieldset": {
                   borderColor: "white",
-                  color: "white",
                 },
               },
               "& .MuiInputBase-input": {
                 overflow: "auto",
-                "&::-webkit-scrollbar": {
-                  width: "6px",
-                  color: "white",
-                },
-                "&::-webkit-scrollbar-track": {
-                  background: "grey",
-                  color: "white",
-                },
-                "&::-webkit-scrollbar-thumb": {
-                  background: "darkgrey",
-                  borderRadius: "4px",
-                  color: "white",
+                "@media (max-width: 600px)": {
+                  fontSize: "0.875rem",
                 },
               },
             }}
           />
-
           <Button
             variant="contained"
             onClick={sendMessage}
@@ -215,6 +234,11 @@ export default function Home() {
               bgcolor: "#660708",
               fontWeight: "bold",
               color: "#FFF",
+              "@media (max-width: 600px)": {
+                width: "100%",
+                height: "48px",
+                fontSize: "0.875rem",
+              },
               "&:hover": {
                 bgcolor: "#A4161A",
                 fontWeight: "bold",
