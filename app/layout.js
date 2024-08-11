@@ -1,8 +1,8 @@
 // app/layout.js
-import { Inter } from "next/font/google";
-import "./globals.css"; // This imports the global CSS file
+import { Kanit } from "next/font/google";
+import "./globals.css"; // Ensure this imports your global styles correctly
 
-const inter = Inter({ subsets: ["latin"] });
+const kanit = Kanit({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Comp Sci Chronicles",
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>
+      <body className={kanit.className}>
         {children}
       </body>
     </html>
