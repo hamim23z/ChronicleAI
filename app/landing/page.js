@@ -37,23 +37,80 @@ export default function LandingPage() {
           paddingBottom: "50px",
         }}
       >
-        Click the button below to get started.
+        Click the buttons below to get started.
       </h5>
-      <Link href="/chat">
-        <button
-          style={{
-            cursor: "pointer",
-            color: "black",
-            textTransform: "uppercase",
-            fontWeight: "bold",
-            border: "2px solid white",
-            padding: "15px",
-            borderRadius: "20px",
-          }}
-        >
-          Get Started
-        </button>
-      </Link>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "20px"
+        }}
+      >
+        <Link href="/chat">
+          <button
+            style={{
+              cursor: "pointer",
+              color: "black",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              border: "2px solid white",
+              padding: "15px",
+              borderRadius: "20px",
+            }}
+          >
+            Get Started
+          </button>
+        </Link>
+
+        <Link href="/signin">
+          <button
+            style={{
+              cursor: "pointer",
+              color: "black",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              border: "2px solid white",
+              padding: "15px",
+              borderRadius: "20px",
+            }}
+          >
+            Sign In
+          </button>
+        </Link>
+
+        <Link href="/signout">
+          <button
+            style={{
+              cursor: "pointer",
+              color: "black",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              border: "2px solid white",
+              padding: "15px",
+              borderRadius: "20px",
+            }}
+          >
+            Sign Out
+          </button>
+        </Link>
+
+        <Link href="/signup">
+          <button
+            style={{
+              cursor: "pointer",
+              color: "black",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              border: "2px solid white",
+              padding: "15px",
+              borderRadius: "20px",
+            }}
+          >
+            Sign Up
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
