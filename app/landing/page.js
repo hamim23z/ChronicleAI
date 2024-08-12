@@ -18,36 +18,51 @@ export default function LandingPage() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        textAlign: "center",
       }}
     >
       <h1
         style={{
           textTransform: "uppercase",
-          paddingBottom: "20px",
+          paddingBottom: "2px",
           color: "white",
+          fontSize: "3rem",
         }}
       >
         Computer Science Chronicles
       </h1>
 
-      <h5
+      <h3
+        style={{
+          textTransform: "uppercase",
+          paddingBottom: "60px",
+          color: "white",
+          fontSize: "1.5rem",
+        }}
+      >
+        Chronicle AI - For your CS needs
+      </h3>
+
+      <h4
         style={{
           color: "white",
           textTransform: "uppercase",
-          paddingBottom: "50px",
+          paddingBottom: "20px",
+          fontSize: "1rem",
         }}
       >
         Click the buttons below to get started.
-      </h5>
+      </h4>
 
       <div
         style={{
           display: "flex",
           flexDirection: "row",
-          gap: "20px"
+          gap: "20px",
+          flexWrap: "wrap",
+          justifyContent: "center",
         }}
       >
-
         <Link href="/signin">
           <button
             style={{
@@ -56,8 +71,9 @@ export default function LandingPage() {
               textTransform: "uppercase",
               fontWeight: "bold",
               border: "2px solid white",
-              padding: "15px",
+              padding: "15px 30px",
               borderRadius: "20px",
+              fontSize: "1rem",
             }}
           >
             Sign In
@@ -72,8 +88,9 @@ export default function LandingPage() {
               textTransform: "uppercase",
               fontWeight: "bold",
               border: "2px solid white",
-              padding: "15px",
+              padding: "15px 30px",
               borderRadius: "20px",
+              fontSize: "1rem",
             }}
           >
             Sign Up

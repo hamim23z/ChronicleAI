@@ -83,7 +83,7 @@ export default function ChatPage() {
       }}
     >
 
-      <Navbar /> {/* Add the Navbar component here */}
+      <Navbar />
 
 
       <Typography
@@ -93,8 +93,10 @@ export default function ChatPage() {
           color: "#fff",
           backgroundColor: "#111",
           padding: "20px",
+          marginTop: "30px",
           borderRadius: "20px",
-          fontWeight: "bold",
+          fontFamily: "Kanit, sans-serif",
+          fontWeight: "900",
           textTransform: "uppercase",
           textAlign: "center",
           maxWidth: "1200px",

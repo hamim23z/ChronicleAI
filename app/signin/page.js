@@ -30,131 +30,99 @@ export default function SigninPage() {
   };
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      height="100vh"
-      padding={2}
-      sx={{
-        backgroundImage: `url('/csbackground.png')`,
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        padding: "20px",
+        backgroundImage: `url('/purpleroot.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Typography
-        variant="h4"
-        gutterBottom
-        sx={{
-          color: "#fff",
-          backgroundColor: "#111",
-          padding: "20px",
-          borderRadius: "20px",
-          fontWeight: "bold",
+      <h1
+        style={{
+          color: "white",
+          fontFamily: "Kanit, sans-serif",
+          fontWeight: "900",
           textTransform: "uppercase",
-          textAlign: "center",
-          maxWidth: "500px",
+          paddingBottom: "20px",
         }}
       >
         Sign In
-      </Typography>
-
-      <Box
-        component="form"
+      </h1>
+      <form
         onSubmit={handleSubmit}
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        width="100%"
-        maxWidth="400px"
-        p={2}
-        sx={{
-          backgroundColor: "#111",
-          borderRadius: "8px",
-          boxShadow: 3,
-        }}
+        style={{ maxWidth: "400px", width: "100%" }}
       >
-        <TextField
-          label="Email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          fullWidth
-          margin="normal"
-          InputProps={{
-            style: {
-              color: "white",
-            },
-          }}
-          InputLabelProps={{
-            style: {
-              color: "#FFF",
-            },
-          }}
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              "& fieldset": {
-                borderColor: "white",
-              },
-              "&:hover fieldset": {
-                borderColor: "white",
-              },
-              "&.Mui-focused fieldset": {
-                borderColor: "white",
-              },
-            },
-          }}
-        />
-        <TextField
-          label="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          fullWidth
-          margin="normal"
-          InputProps={{
-            style: {
-              color: "white",
-            },
-          }}
-          InputLabelProps={{
-            style: {
-              color: "#FFF",
-            },
-          }}
-          sx={{
-            "& .MuiOutlinedInput-root": {
-              "& fieldset": {
-                borderColor: "white",
-              },
-              "&:hover fieldset": {
-                borderColor: "white",
-              },
-              "&.Mui-focused fieldset": {
-                borderColor: "white",
-              },
-            },
-          }}
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          sx={{
-            mt: 2,
-            bgcolor: "#660708",
-            color: "#FFF",
-            "&:hover": {
-              bgcolor: "#A4161A",
-            },
+        <label
+          style={{
+            display: "block",
+            marginBottom: "10px",
+            color: "white",
+            fontWeight: "900",
           }}
         >
-          Sign In
-        </Button>
-      </Box>
-    </Box>
+          Your Email:
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            style={{
+              width: "100%",
+              padding: "12px",
+              marginBottom: "10px",
+              fontFamily: "Kanit, sans-serif",
+              fontWeight: "bold",
+            }}
+          />
+        </label>
+
+        <label
+          style={{
+            display: "block",
+            marginBottom: "20px",
+            color: "white",
+            fontWeight: "900",
+          }}
+        >
+          Your Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            style={{
+              width: "100%",
+              padding: "12px",
+              fontFamily: "Kanit, sans-serif",
+              fontWeight: "bold",
+            }}
+          />
+        </label>
+
+        <button
+          type="submit"
+          style={{
+            cursor: "pointer",
+            color: "black",
+            textTransform: "uppercase",
+            fontWeight: "bold",
+            border: "2px solid black",
+            padding: "15px",
+            borderRadius: "20px",
+            backgroundColor: "white",
+            width: "100%",
+          }}
+        >
+          Sign In & Continue
+        </button>
+      </form>
+    </div>
   );
 }
