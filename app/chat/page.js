@@ -2,6 +2,8 @@
 "use client";
 import { Box, Stack, TextField, Button, Typography } from "@mui/material";
 import { useState } from "react";
+import Navbar from "./navbar"; // Import the Navbar component
+
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([
@@ -80,6 +82,10 @@ export default function ChatPage() {
         },
       }}
     >
+
+      <Navbar /> {/* Add the Navbar component here */}
+
+
       <Typography
         variant="h4"
         gutterBottom

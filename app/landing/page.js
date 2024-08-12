@@ -47,21 +47,6 @@ export default function LandingPage() {
           gap: "20px"
         }}
       >
-        <Link href="/chat">
-          <button
-            style={{
-              cursor: "pointer",
-              color: "black",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              border: "2px solid white",
-              padding: "15px",
-              borderRadius: "20px",
-            }}
-          >
-            Get Started
-          </button>
-        </Link>
 
         <Link href="/signin">
           <button
@@ -76,22 +61,6 @@ export default function LandingPage() {
             }}
           >
             Sign In
-          </button>
-        </Link>
-
-        <Link href="/signout">
-          <button
-            style={{
-              cursor: "pointer",
-              color: "black",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              border: "2px solid white",
-              padding: "15px",
-              borderRadius: "20px",
-            }}
-          >
-            Sign Out
           </button>
         </Link>
 
