@@ -1,5 +1,6 @@
 ***
-This is a team project. The team consists of me, Alexis Juarez Gomez, Hamim Choudhury, and Kenneth Romero
+This is a team project. The team consists of me, Alexis Juarez Gomez, Hamim Choudhury, and Kenneth Romero. 
+This is still in development and changes are being made to this. 
 ***
 
 
